@@ -1,0 +1,4 @@
+[submodule "Domain/Common"]
+	path = Domain/Common
+	url = https://newshore-booking@dev.azure.com/newshore-booking/NS.Booking_Domains/_git/NS.Booking.Common.Domain
+	branch = release/1.3.0

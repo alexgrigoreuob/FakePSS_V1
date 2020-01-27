@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7144E84E-A855-406D-9B31-32ABD30E7E25}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NS.Booking.Infrastructure.Fake.Resources</RootNamespace>
+    <AssemblyName>NS.Booking.Infrastructure.Fake.Resources</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeatMap\Models\Configuration\ConfigCabin.cs" />
+    <Compile Include="SeatMap\Models\Configuration\ConfigCabinDistribution.cs" />
+    <Compile Include="SeatMap\Models\Configuration\ConfigCabinElement.cs" />
+    <Compile Include="SeatMap\Models\Configuration\ConfigDeck.cs" />
+    <Compile Include="SeatMap\Models\Configuration\ConfigSectors.cs" />
+    <Compile Include="SeatMap\Models\Configuration\ConfigTransport.cs" />
+    <Compile Include="SeatMap\Models\Configuration\ConfigTransports.cs" />
+    <Compile Include="SeatMap\Services\RetrieveSeatMapDomainService.cs" />
+    <Compile Include="_IoCInstaller\Installer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="$(SolutionDir)Domain\Resources\NS.Booking.Resources.Domain\NS.Booking.Resources.Domain.csproj">
+      <Project>{d719bab4-586e-4068-aee1-4f241434e776}</Project>
+      <Name>NS.Booking.Resources.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Newshore.Core.DDD">
+      <Version>2.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newshore.Core.IoC">
+      <Version>1.3.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newshore.Core.Logger">
+      <Version>1.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Newshore.Core.NativeObjects">
+      <Version>1.6.2</Version>
+    </PackageReference>
+    <PackageReference Include="Newshore.Core.Storage">
+      <Version>1.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="NS.Core.Storage.Cache">
+      <Version>1.0.6</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

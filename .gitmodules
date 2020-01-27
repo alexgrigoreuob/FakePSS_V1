@@ -1,0 +1,16 @@
+[submodule "src/Domain/Pricing"]
+	path = src/Domain/Pricing
+	url = https://newshore-booking@dev.azure.com/newshore-booking/NS.Booking_Domains/_git/NS.Booking.Pricing.Domain
+	branch = develop
+[submodule "src/Domain/Booking"]
+	path = src/Domain/Booking
+	url = https://newshore-booking@dev.azure.com/newshore-booking/NS.Booking_Domains/_git/NS.Booking.Domain
+	branch = develop
+[submodule "src/Domain/Common"]
+	path = src/Domain/Common
+	url = https://newshore-booking@dev.azure.com/newshore-booking/NS.Booking_Domains/_git/NS.Booking.Common.Domain
+	branch = develop
+[submodule "src/Domain/Resources"]
+	path = src/Domain/Resources
+	url = https://newshore-booking@dev.azure.com/newshore-booking/NS.Booking_Domains/_git/NS.Booking.Resources.Domain
+	branch = develop
